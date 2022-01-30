@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Text.Json;
 using Wasmtime;
 
 namespace Opa.Wasm
 {
-	public partial class OpaPolicy : IDisposable
+	public partial class OpaPolicy : IPolicy, IDisposable
 	{
 		private int _dataAddr;
 		private int _baseHeapPtr;
