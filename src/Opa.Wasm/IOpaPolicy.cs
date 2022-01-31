@@ -2,7 +2,7 @@ using System;
 
 namespace Opa.Wasm
 {
-    public interface IPolicy : IDisposable
+    public interface IOpaPolicy : IDisposable
     {
 		string Evaluate(string json, bool disableFastEvaluate = false);
 

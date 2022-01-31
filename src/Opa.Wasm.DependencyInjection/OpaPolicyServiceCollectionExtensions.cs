@@ -13,7 +13,7 @@ public static class OpaPolicyServiceCollectionExtensions
 	{
 		// TODO: inject this factory instead of static and add configurations
 		_factory.AddRuntime<TClient>(opaWasmPath);
-		services.AddTransient<IPolicy<TClient>>(_ => _factory.CreatePolicy<TClient>());
+		services.AddTransient<IOpaPolicy<TClient>>(_ => _factory.CreatePolicy<TClient>());
 		return services;
 	}
 }

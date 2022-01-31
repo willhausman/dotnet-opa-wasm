@@ -13,7 +13,7 @@ namespace Opa.Wasm.UnitTests
 			var services = new ServiceCollection();
 			services.AddOpaPolicy<DependencyInjectionTests>(WasmFiles.HelloWorldExample);
 			using var provider = services.BuildServiceProvider();
-			var policy = provider.GetRequiredService<IPolicy<DependencyInjectionTests>>();
+			var policy = provider.GetRequiredService<IOpaPolicy<DependencyInjectionTests>>();
 			string data = new
 			{
 				world = "world"
@@ -49,9 +49,9 @@ namespace Opa.Wasm.UnitTests
 
 		private class Implementation1
 		{
-			private readonly IPolicy<Implementation1> policy;
+			private readonly IOpaPolicy<Implementation1> policy;
 
-			public Implementation1(IPolicy<Implementation1> policy)
+			public Implementation1(IOpaPolicy<Implementation1> policy)
 			{
 				this.policy = policy;
 				var data = new
@@ -79,9 +79,9 @@ namespace Opa.Wasm.UnitTests
 
 		private class Implementation2
 		{
-			private readonly IPolicy<Implementation2> policy;
+			private readonly IOpaPolicy<Implementation2> policy;
 
-			public Implementation2(IPolicy<Implementation2> policy)
+			public Implementation2(IOpaPolicy<Implementation2> policy)
 			{
 				this.policy = policy;
 				string data = File.ReadAllText(Path.Combine("TestData", "basic_rbac_data.json"));

@@ -46,7 +46,7 @@ internal class OpaPolicyFactory : IDisposable
 	/// Instantiate the policy.
 	/// </summary>
 	/// <returns>A new instance of the policy that can be evaluated.</returns>
-	public IPolicy<TClient> CreatePolicy<TClient>()
+	public IOpaPolicy<TClient> CreatePolicy<TClient>()
 	{
 		if (_loadedRuntimes.TryGetValue(typeof(TClient), out var runtime))
 		{
@@ -76,6 +76,7 @@ internal class OpaPolicyFactory : IDisposable
 				runtime.OpaRuntime.Dispose();
 				runtime.WasmModule.Dispose();
 			}
+			_loadedRuntimes.Clear();
 		}
 	}
 

@@ -2,7 +2,7 @@ using Wasmtime;
 
 namespace Opa.Wasm.DependencyInjection;
 
-public class TypedOpaPolicy<TClient> : OpaPolicy, IPolicy<TClient>
+public class TypedOpaPolicy<TClient> : OpaPolicy, IOpaPolicy<TClient>
 {
 	public TypedOpaPolicy(string fileName)
 		: base(fileName)
