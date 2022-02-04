@@ -23,6 +23,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opa.Wasm.Benchmarks", "Opa.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opa.Wasm.UnitTests", "Opa.Wasm.UnitTests\Opa.Wasm.UnitTests.csproj", "{AFC00FD4-7578-4B73-938D-8EC351CBDB2D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opa.Wasm.Abstractions", "Opa.Wasm.Abstractions\Opa.Wasm.Abstractions.csproj", "{827A3BD6-C4E3-4E74-A57A-C11D7840CECA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opa.Wasm.Wasmtime", "Opa.Wasm.Wasmtime\Opa.Wasm.Wasmtime.csproj", "{F09C2633-CCE0-4E33-9DA5-6901554D6C60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{AFC00FD4-7578-4B73-938D-8EC351CBDB2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFC00FD4-7578-4B73-938D-8EC351CBDB2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFC00FD4-7578-4B73-938D-8EC351CBDB2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{827A3BD6-C4E3-4E74-A57A-C11D7840CECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{827A3BD6-C4E3-4E74-A57A-C11D7840CECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{827A3BD6-C4E3-4E74-A57A-C11D7840CECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{827A3BD6-C4E3-4E74-A57A-C11D7840CECA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F09C2633-CCE0-4E33-9DA5-6901554D6C60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F09C2633-CCE0-4E33-9DA5-6901554D6C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F09C2633-CCE0-4E33-9DA5-6901554D6C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F09C2633-CCE0-4E33-9DA5-6901554D6C60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
